@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit project</title>
+</head>
+<body>
+
+<form action="/projects/<%= @project.id %>" method="post">
+	<input type="hidden" name="_method" value="patch">
+	<table>
+		<tr>
+			<td>Name:</td>
+			<td><input type="text" name="Name" value="<%= @project.name %>"></td>
+		</tr>
+		<tr>
+			<td>Description:</td>
+			<td><input type="text" name="Description" value="<%= @project.description %>"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" value="Update Project"></td>
+		</tr>
+	</table>
+</form>
+<form action="/projects/<%= @project.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Delete Project">
+</form>
+<a href="/projects">Go Back</a>
+</body>
+</html>

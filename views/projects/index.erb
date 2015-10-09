@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project</title>
+</head>
+<body>
+<table>
+<% @projects.each do |project| %>
+	<tr>
+		<td> <a href="/projects/<%= project.id %>"> <%= project.name%></a></td>
+		<td><%= project.description%></td>
+		<td><a href="/projects/<%= project.id %>/edit">edit</a></td>
+	</tr>
+<% end %>
+</table>
+<a href="/projects/new">Add a Project</a>
+</body>
+</html>
